@@ -1,7 +1,7 @@
 export class Car {
   // NOTE we will pass through a single object when newing up this car class
   /**
-   * @param {{ make: String; model: String; year: Number; price: Number; color: String; imgUrl: String; description: String; transmission: String; mileage: Number; }} data
+   * @param {{ make: String; model: String; year: Number; price: Number; color: String; imgUrl: String; description: String; transmission: String; mileage: Number; listedAt?: String }} data
    */
   constructor(data) {
     this.model = data.model
@@ -15,7 +15,16 @@ export class Car {
     this.description = data.description
 
     // NOTE if no arguments are passed through the Date constructor, it will default to your computers' date and time
-    this.listedAt = new Date()
+    // NOTE this checks to see if the car already has date saved to it (it came from local storage), or if needs to have a date assigned it (it came from a form submission)
+    this.listedAt = data.listedAt == undefined ? new Date() : new Date(data.listedAt)
+
+    // REVIEW equivalent to the ternary operator above
+    // if (data.listedAt == undefined) {
+    //   this.listedAt = new Date()
+    // }
+    // else {
+    //   this.listedAt = new Date(data.listedAt)
+    // }
   }
 
   get cardHTMLTemplate() {
