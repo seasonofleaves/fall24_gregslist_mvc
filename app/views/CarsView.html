@@ -9,45 +9,46 @@
 
   <section class="row">
     <div class="col-12">
-      <form>
+      <form onsubmit="app.CarsController.createCar()">
         <div class="mb-3">
           <label for="make">Car Make</label>
-          <input id="make" type="text" required minlength="2" maxlength="100" placeholder="Car Make...">
+          <input id="make" name="make" type="text" required minlength="2" maxlength="100" placeholder="Car Make...">
         </div>
         <div class="mb-3">
           <label for="model">Car Model</label>
-          <input id="model" type="text" required maxlength="200" placeholder="Car Model...">
+          <input id="model" name="model" type="text" required maxlength="200" placeholder="Car Model...">
         </div>
         <div class="mb-3">
           <label for="imgUrl">Car Image</label>
-          <input id="imgUrl" type="url" required maxlength="2000" placeholder="Car Image...">
+          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="Car Image...">
         </div>
         <div class="mb-3">
           <label for="year">Car Year</label>
-          <input id="year" type="number" required min="1886" max="2025" placeholder="2025">
+          <input id="year" name="year" type="number" required min="1886" max="2025" placeholder="2025">
         </div>
         <div class="mb-3">
           <label for="price">Car Price</label>
-          <input id="price" type="number" required min="0" max="1700000" placeholder="0">
+          <input id="price" name="price" type="number" required min="0" max="1700000" placeholder="0">
         </div>
         <div class="mb-3">
           <label for="mileage">Car Mileage</label>
-          <input id="mileage" type="number" required min="1" max="999999" placeholder="1">
+          <input id="mileage" name="mileage" type="number" required min="1" max="999999" placeholder="1">
         </div>
         <div class="mb-3">
           <label for="description">Car Description</label>
-          <textarea id="description" maxlength="5000" placeholder="Description of the car"></textarea>
+          <textarea id="description" name="description" maxlength="5000"
+            placeholder="Description of the car"></textarea>
         </div>
         <div class="mb-3">
           <label for="color">Car Color</label>
-          <input id="color" type="color" required>
+          <input id="color" name="color" type="color" required>
         </div>
         <div class="mb-3">
           <label for="transmission">Car Transmission</label>
-          <select id="transmission" required>
-            <option value="">Automatic</option>
-            <option value="">Manual</option>
-            <option value="">Unknown</option>
+          <select id="transmission" name="transmission" required>
+            <option value="automatic">Automatic</option>
+            <option value="manual">Manual</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
         <div>
