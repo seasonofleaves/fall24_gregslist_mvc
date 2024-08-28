@@ -18,26 +18,35 @@ export class Car {
   get cardHTMLTemplate() {
     return `
      <div class="col-12 p-0 mb-3">
-      <div class="row bg-light shadow">
+      <div class="row bg-light shadow car-border" style="border-color: ${this.color};">
         <div class="col-4 p-0">
           <img class="img-fluid car-img"
-            src="https://images.unsplash.com/photo-1716167950737-ac635698a16a?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Cool car picture">
+            src="${this.imgUrl}"
+            alt="${this.year} ${this.make} ${this.model}">
         </div>
         <div class="col-8">
           <div class="p-2">
-            <p class="fs-3">2002 Honda Civic</p>
-            <p class="fs-4">$2000</p>
-            <p>Red car goes fast</p>
+            <p class="fs-3">${this.year} ${this.make} ${this.model}</p>
+            <p class="fs-4">$${new Intl.NumberFormat().format(this.price)}</p>
+            <p>${this.description}</p>
             <p class="fs-3">
-              <i class="mdi mdi-car-shift-pattern" title="Manual Transmission"></i>
-              <i class="mdi mdi-refresh-auto" title="Automatic Transmission"></i>
+              ${this.transmissionIcon}
             </p>
-            <p>2000000000 miles</p>
+            <p>${this.mileage} miles</p>
           </div>
         </div>
       </div>
     </div>
     `
+  }
+
+  get transmissionIcon() {
+    if (this.transmission == 'manual') {
+      return '<i class="mdi mdi-car-shift-pattern" title="Manual Transmission"></i>'
+    }
+    if (this.transmission == 'automatic') {
+      return '<i class="mdi mdi-refresh-auto" title="Automatic Transmission"></i>'
+    }
+    return '<i class="mdi mdi-help" title="Unknown Transmission"></i>'
   }
 }
