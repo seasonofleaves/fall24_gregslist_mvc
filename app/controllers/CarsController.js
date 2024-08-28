@@ -32,4 +32,17 @@ export class CarsController {
     carsService.createCar(carDataFromForm)
 
   }
+
+  deleteCar(carId) {
+
+    const wantsToDelete = window.confirm("Are you sure you want to delete this car?")
+
+    // if (wantsToDelete == false)
+    if (!wantsToDelete) return
+
+
+    console.log('Deleting car!', carId);
+    carsService.deleteCar(carId)
+
+  }
 }

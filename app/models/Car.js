@@ -1,9 +1,13 @@
+import { generateId } from "../utils/GenerateId.js"
+
 export class Car {
   // NOTE we will pass through a single object when newing up this car class
   /**
    * @param {{ make: String; model: String; year: Number; price: Number; color: String; imgUrl: String; description: String; transmission: String; mileage: Number; listedAt?: String }} data
    */
   constructor(data) {
+    this.id = generateId()
+
     this.model = data.model
     this.make = data.make
     this.year = data.year
@@ -31,14 +35,17 @@ export class Car {
     return `
      <div class="col-12 p-0 mb-3">
       <div class="row bg-light shadow car-border" style="border-color: ${this.color};">
-        <div class="col-4 p-0">
+        <div class="col-md-4 p-0">
           <img class="img-fluid car-img"
             src="${this.imgUrl}"
             alt="${this.year} ${this.make} ${this.model}">
         </div>
-        <div class="col-8">
+        <div class="col-md-8">
           <div class="p-2">
-            <p class="fs-3">${this.year} ${this.make} ${this.model}</p>
+            <p class="fs-3">
+            ${this.year} ${this.make} ${this.model}
+            <i onclick="app.CarsController.deleteCar('${this.id}')" class="mdi mdi-delete-forever text-danger" role="button" title="Delete this ${this.make} ${this.model}"></i>
+            </p>
             <p class="fs-4">
              Listed on ${this.listedDate} at ${this.listedTime} 
             </p>
