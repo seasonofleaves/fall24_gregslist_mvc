@@ -6,41 +6,14 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [HomeController, ExamplesController],
-    view: /*html*/`
-    <div class="container">
-      <section class="row">
-        <div class="col-12">
-          <div class="text-center">
-            <h1>Welcome to Gregslist</h1>
-            <h2>Choose a listing type</h2>
-            <div>
-              <a href="#/cars">
-                <button class="btn btn-dark">
-                  Cars <i class="mdi mdi-car-convertible"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    `
+    view: 'app/views/HomeView.html'
   },
   {
     path: '#/about',
     view: 'app/views/AboutView.html'
   },
   {
-    path: '#/jeremy',
-    view: /*html*/`
-    <h1>Jeremy Page!</h1>
-    `
-  },
-  {
     path: '#/cars',
-    view: /*html*/`
-    <h1>Cars Page</h1>
-    `
+    view: 'app/views/CarsView.html'
   }
 ])
