@@ -42,7 +42,7 @@ export class Car {
             <p class="fs-4">
              Listed on ${this.listedDate} at ${this.listedTime} 
             </p>
-            <p class="fs-4">$${new Intl.NumberFormat().format(this.price)}</p>
+            <p class="fs-4">$${this.priceAsCurrency}</p>
             <p>${this.description}</p>
             <p class="fs-3">
               ${this.transmissionIcon}
@@ -70,5 +70,9 @@ export class Car {
       return '<i class="mdi mdi-refresh-auto" title="Automatic Transmission"></i>'
     }
     return '<i class="mdi mdi-help" title="Unknown Transmission"></i>'
+  }
+
+  get priceAsCurrency() {
+    return new Intl.NumberFormat().format(this.price)
   }
 }
