@@ -15,9 +15,11 @@ export const router = new Router([
             <h1>Welcome to Gregslist</h1>
             <h2>Choose a listing type</h2>
             <div>
-              <button class="btn btn-dark">
-                Cars <i class="mdi mdi-car-convertible"></i>
-              </button>
+              <a href="#/cars">
+                <button class="btn btn-dark">
+                  Cars <i class="mdi mdi-car-convertible"></i>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -33,6 +35,12 @@ export const router = new Router([
     path: '#/jeremy',
     view: /*html*/`
     <h1>Jeremy Page!</h1>
+    `
+  },
+  {
+    path: '#/cars',
+    view: /*html*/`
+    <h1>Cars Page</h1>
     `
   }
 ])
