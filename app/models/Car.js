@@ -17,7 +17,7 @@ export class Car {
 
   get cardHTMLTemplate() {
     return `
-     <div class="col-12 p-0">
+     <div class="col-12 p-0 mb-3">
       <div class="row bg-light shadow">
         <div class="col-4 p-0">
           <img class="img-fluid car-img"
