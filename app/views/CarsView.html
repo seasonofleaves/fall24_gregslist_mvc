@@ -7,6 +7,32 @@
     </div>
   </section>
 
+  <section class="row">
+    <div class="col-12">
+      <form>
+        <div class="mb-3">
+          <label for="make">Car Make</label>
+          <input id="make" type="text" required minlength="2" maxlength="100" placeholder="Car Make...">
+        </div>
+        <div class="mb-3">
+          <label for="model">Car Model</label>
+          <input id="model" type="text" required maxlength="200" placeholder="Car Model...">
+        </div>
+        <div class="mb-3">
+          <label for="year">Car Year</label>
+          <input id="year" type="number" required min="1886" max="2025" placeholder="2025">
+        </div>
+        <div class="mb-3">
+          <label for="price">Car Price</label>
+          <input id="price" type="number" required min="0" max="1700000" placeholder="0">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <section id="car-listings" class="row">
     <!-- <div class="col-12 p-0 mb-3">
       <div class="row bg-light shadow">

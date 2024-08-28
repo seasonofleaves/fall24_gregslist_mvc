@@ -8,3 +8,7 @@
 .car-border {
   border: 3px solid;
 }
+
+label {
+  display: block;
+}
