@@ -1,11 +1,10 @@
 import { router } from './router-config.js';
 import { HomeController } from './controllers/HomeController.js';
-const USE_ROUTER = false
+const USE_ROUTER = true
 
 class App {
 
-  HomeController = new HomeController()
-
+  // NOTE today we will be registering controller in the router-config
   constructor() {
     if (USE_ROUTER) {
       this.router = router
