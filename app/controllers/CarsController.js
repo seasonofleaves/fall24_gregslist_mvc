@@ -7,8 +7,8 @@ export class CarsController {
     console.log('Cars controller is loaded 🚗');
     AppState.on('cars', this.drawCars)
 
-
-    this.drawCars()
+    carsService.loadCars()
+    // this.drawCars() listener will be triggered when pulled out of local storage
   }
 
   drawCars() {

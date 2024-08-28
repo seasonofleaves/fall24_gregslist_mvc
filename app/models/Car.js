@@ -13,6 +13,9 @@ export class Car {
     this.mileage = data.mileage
     this.price = data.price
     this.description = data.description
+
+    // NOTE if no arguments are passed through the Date constructor, it will default to your computers' date and time
+    this.listedAt = new Date()
   }
 
   get cardHTMLTemplate() {
@@ -27,6 +30,9 @@ export class Car {
         <div class="col-8">
           <div class="p-2">
             <p class="fs-3">${this.year} ${this.make} ${this.model}</p>
+            <p class="fs-4">
+             Listed on ${this.listedDate} at ${this.listedTime} 
+            </p>
             <p class="fs-4">$${new Intl.NumberFormat().format(this.price)}</p>
             <p>${this.description}</p>
             <p class="fs-3">
@@ -38,6 +44,13 @@ export class Car {
       </div>
     </div>
     `
+  }
+
+  get listedDate() {
+    return this.listedAt.toLocaleDateString()
+  }
+  get listedTime() {
+    return this.listedAt.toLocaleTimeString()
   }
 
   get transmissionIcon() {
