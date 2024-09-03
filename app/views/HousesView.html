@@ -1,0 +1,95 @@
+<div class="container">
+  <section class="row">
+    <div class="col-12">
+      <div class="text-center my-2">
+        <h1>Houses</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="col-12">
+      <form>
+        <div class="mb-3">
+          <label for="year">Year Built</label>
+          <input id="year" type="number" required min="1637" max="2025" placeholder="1972">
+        </div>
+        <div class="mb-3">
+          <label for="name">Owner or Listing Agent</label>
+          <input id="name" type="text" required minlength="4" maxlength="100" placeholder="Listing Owner Name">
+        </div>
+        <div class="mb-3">
+          <label for="bedrooms">Bedrooms</label>
+          <input id="bedrooms" name="bedrooms" type="number" required min="1" max="50" placeholder="4">
+        </div>
+        <div class="mb-3">
+          <label for="bathrooms">Bathrooms</label>
+          <input id="bathrooms" name="bathrooms" type="number" required min="1" max="50" placeholder="2">
+        </div>
+        <div class="mb-3">
+          <label for="sqft">Square Footage</label>
+          <input id="sqft" name="sqft" type="number" required min="200" max="100000" placeholder="2498">
+        </div>
+        <div class="mb-3">
+          <label for="price">Price</label>
+          <input id="price" name="price" type="number" required min="5000" max="300000000" placeholder="250000">
+        </div>
+        <div class="mb-3">
+          <label for="description">Desciption</label>
+          <textarea id="description" name="description" maxlength="5000"
+            placeholder="Description of the house"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="imgUrl">House Image</label>
+          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="House Image...">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="house-listings" class="row">
+
+    <!-- <div class="col-12 p-0 mb-3">
+      <div class="row bg-light shadow car-border">
+        <div class="col-md-4 p-0">
+          <img class="img-fluid car-img"
+            src="https://photos.zillowstatic.com/fp/13d1626a513023963077c21c7ac63f55-uncropped_scaled_within_1536_1152.webp"
+            alt="House">
+        </div>
+        <div class="col-md-8">
+          <div class="p-2">
+            <p class="fs-3">
+              4 beds 2 baths 2350 sqft
+              <i onclick="app.CarsController.deleteCar('${this.id}')" class="mdi mdi-delete-forever text-danger"
+                role="button" title="Delete this ${this.make} ${this.model}"></i>
+            </p>
+            <p class="fs-4">
+              Listed on ${this.listedDate} at ${this.listedTime}
+            </p>
+            <p class="fs-4">$250000</p>
+            <p>Built in: </p>
+            <p>Description</p>
+            <p class="fs-3">
+             Contact:
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+</div>

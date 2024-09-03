@@ -7,13 +7,13 @@ import { House } from './models/House.js'
 class ObservableAppState extends EventEmitter {
   houses = [
     new House({
-      year: '1974',
-      bedrooms: 3,
-      bathrooms: 2.5,
-      sqft: 1400,
-      price: 375000,
+      year: 1972,
+      bedrooms: 4,
+      bathrooms: 2,
+      sqft: 2350,
+      price: 360000,
       description: 'Newly renovated mid-century modern home',
-      imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg'
+      imgUrl: 'https://photos.zillowstatic.com/fp/13d1626a513023963077c21c7ac63f55-uncropped_scaled_within_1536_1152.webp'
     }),
   ]
 
